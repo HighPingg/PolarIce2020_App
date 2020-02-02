@@ -70,8 +70,8 @@ class ProductShowcaseState extends State<ProductShowcase> {
                         ),
                       ),
                       Wrap(
-                        spacing: 15.0,
-                        runSpacing: 20.0,
+                        spacing: kIsWeb ? 200 : 15.0,
+                        runSpacing: kIsWeb? 200 : 20.0,
                         children: <Widget>[
                           for (int index = 0;
                               index < widget.list.length;
@@ -134,8 +134,8 @@ class ProductShowcaseState extends State<ProductShowcase> {
                     borderRadius: BorderRadius.circular(15),
                     child: Image.asset(
                       widget.list[index].imagePath,
-                      width: 180,
-                      height: 170,
+                      width: kIsWeb ? 500 : 180,
+                      height: kIsWeb ? 500 : 170,
                       fit: BoxFit.cover,
                     ),
                   )
@@ -161,7 +161,7 @@ class ProductShowcaseState extends State<ProductShowcase> {
           child: Text(widget.list[index].name,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: kIsWeb? 30 : 20,
                 fontWeight: FontWeight.bold,
                 fontFamily: 'AdventPro',
               )),

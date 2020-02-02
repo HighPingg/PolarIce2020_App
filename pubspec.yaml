@@ -25,6 +25,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   google_maps_flutter:
   url_launcher:
+  font_awesome_flutter:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
